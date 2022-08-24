@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hi</title>
+    <style>
+      th{
+display:th;
+width: 100px;
+
+font-family:'Times New Roman', Times, serif;
+background: black;
+
+color: white;
+font-size: 20px;
+text-align: center;
+  
+    border: 2px solid;
+    vertical-align:middle; 
+}
+tbody{
+    display:tbody;
+    font-family: serif;
+background:gray;
+
+}
+
+
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <table border="2">
+
+            <thead>
+                <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>GENDER</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    </div>
+
+<script>
+    var tableData = [
+        {
+            "name": "Ryan Schuman",
+            "age": 5,
+            "gender": "Male"
+            },
+            {
+            "name": "Mona Reese",
+            "age": 34,
+            "gender": "Female"
+            },
+            {
+            "name": "Tyler Lawson",
+            "age": 14,
+            "gender": "Male"
+            },
+            {
+            "name": "Tess Mallin",
+            "age": 25,
+            "gender": "Female"
+            },
+            {
+            "name": "Jerry Parkinson",
+            "age": 50,
+            "gender": "Male"
+            },
+            {
+            "name": "Shirley Walters",
+            "age": 31,
+            "gender": "Female"
+            },
+            {
+            "name": "Nina Joseph",
+            "age": 17,
+            "gender": "Female"
+            },
+            {
+            "name": "Vera Daniel",
+            "age": 45,
+            "gender": "Female"
+            },
+            {
+            "name": "Simon Osborne",
+            "age": 32,
+            "gender": "Male"
+            },
+            {
+            "name": "Avery Hawkins",
+            "age": 10,
+            "gender": "Male"
+            },
+            {
+            "name": "Marvin Collins",
+            "age": 22,
+            "gender": "Male"
+            }
+        ]
+      buildTable(tableData)      
+    function buildTable(data)
+    {
+
+        var table=document.getElementById('table-body')
+        for(var i=0;i<data.length;i++)
+        {
+            var row=`<tr>
+    <td>${data[i].name}</td>
+    <td>${data[i].age}</td>
+    <td>${data[i].gender}</td>
+                </tr>`
+    table.innerHTML +=row
+        }
+    }
+</script>
+</body>
+</html>
